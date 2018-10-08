@@ -22,7 +22,7 @@ namespace Step103
             //    Console.WriteLine(names[i] + " " + text);
             //}
 
-            //(Number 2)
+            ////(Number 2)
 
             //int[] childrensAges = { 1, 3, 3, 9, 14, 16, 18 };
 
@@ -32,39 +32,57 @@ namespace Step103
 
             //}
 
-            //(Number 3)
+            ////(Number 3)
             //int[] childrensAges = { 1, 3, 3, 9, 14, 16, 18 };
 
             //for (int i = 0; i < childrensAges.Length; i++)
             //    Console.WriteLine("The Children are " + childrensAges[i]);
 
-            //(Number 4)
-
-            //int[] childrensAges = { 1, 3, 3, 9, 14, 16, 18 };
-
-            //for (int i = 0; i < childrensAges.Length; i++)
+            ////(Number 4)
+            //for (int i = 80; i <= 100; i++)
             //{
-            //    if (i < 10)
-            //    {
-            //        Console.WriteLine("The Children are " + childrensAges[i]);
-            //    }
-            //    else
-            //    break;
+            //    Console.WriteLine("Value of i: {0}", i);
             //}
 
-            //(Number 5)
-            int[] grade = { 78, 88, 99, 45, 69 };
 
-            for (int i = 0; i < grade.Length; i++) 
-            {
-                if (i <= 80)
-                {
-                    Console.WriteLine("Passing grades are " + grade[i]);
-                }
+            ////(Number 5)
 
-            }
+            //for (int i = 80; i < 100; i++)
+            //{
+            //    Console.WriteLine("Value of i: {0}", i);
+            //}
+
+            ////(Number 6 & 7 & 8) --- i cannot figure out how to get this to not write "they are not on the list" for the other people
+
+            //List<string> names = new List<string>() { "Lorri", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
+            //Console.WriteLine("Please type a name ");
+            //string userName = Console.ReadLine();
+
+            //for (int i = 0; i < names.Count; i++)
+            //{
+            //    if (names[i] == userName)
+            //    {
+            //        Console.WriteLine("They are on the list");
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("They are not on the list");
+            //        break;
+            //    }
+            //}
+
+            //(Number 9)
+
+            List<string> names = new List<string>() { "Lorri", "Lane", "Paul", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
+            Console.WriteLine("Please type a name ");
+            string userName = Console.ReadLine();
+
+            string listA = names.FindAll( names = userName  );
+
 
             Console.ReadLine();
         }
     }
 }
+
