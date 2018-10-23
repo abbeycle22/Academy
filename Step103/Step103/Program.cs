@@ -52,7 +52,7 @@ namespace Step103
             //    Console.WriteLine("Value of i: {0}", i);
             //}
 
-            ////(Number 6 & 7 & 8) --- i cannot figure out how to get this to not write "they are not on the list" for the other people
+            ////(Number 6 & 7 & 8) --- 
 
             //List<string> names = new List<string>() { "Lorri", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
             //Console.WriteLine("Please type a name ");
@@ -74,15 +74,80 @@ namespace Step103
 
             //(Number 9)
 
+            //List<string> names = new List<string>() { "Lorri", "Lane", "Paul", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
+
+            ////  Display List
+            //Console.WriteLine("This is the current list of names...");
+            //foreach (string name in names)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            ////  User Input
+            //Console.WriteLine("Please type a name ");
+            //string userName = Console.ReadLine();
+
+            ////  Search List
+            //for (int i = 0; i < names.Count; i++)
+            //{
+            //    if (names[i] == userName)
+            //    {
+            //        Console.WriteLine(userName + " was found at index " + i);
+            //    }
+
+            //}
+
+            //Console.ReadLine();
+
+            //(Number 10)
+
+            //List<string> names = new List<string>() { "Lorri", "Lane", "Paul", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
+
+            ////  Display List
+            //Console.WriteLine("This is the current list of names...");
+            //foreach (string name in names)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            ////  User Input
+            //Console.WriteLine("Please type a name ");
+            //string userName = Console.ReadLine();
+
+            ////  Search List
+            //for (int i = 0; i < names.Count; i++)
+            //{
+            //    if (names[i] == userName)
+            //    {
+            //        Console.WriteLine(userName + " was found at index " + i);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Name not found");
+            //    }
+            //}
+
+            //Console.ReadLine();
+
+            //(Number 11)
+
             List<string> names = new List<string>() { "Lorri", "Lane", "Paul", "Abbey", "Lane", "Rosemary", "Paul", "Kyle", "Casi" };
-            Console.WriteLine("Please type a name ");
-            string userName = Console.ReadLine();
+            List<string> dupNames = new List<string>();
 
-            string listA = names.FindAll( names = userName  );
 
+            foreach (string name in names)
+            {
+                if (!dupNames.Contains(name))
+                {
+                    dupNames.Add(name);
+                }
+                else
+                {
+                    Console.WriteLine(name + " is a duplicate.");
+                }
+            }
 
             Console.ReadLine();
         }
     }
 }
-
