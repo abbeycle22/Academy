@@ -17,9 +17,9 @@ namespace Step_111
             Console.WriteLine("Please type second number: ");
             int _secondNumber = Convert.ToInt32(Console.ReadLine());
 
-
-            //Console.WriteLine(myClass.Multiply());
-            Console.WriteLine("The product of " + _firstNumber + " and " + _secondNumber + " is: " + myClass.Multiply());
+            Console.WriteLine("The product of " + _firstNumber + " and " + _secondNumber + " is: " + myClass.Multiply(_firstNumber, _secondNumber));
+            Console.WriteLine("The sum of " + _firstNumber + " and " + _secondNumber + " is: " + myClass.Add(_firstNumber, _secondNumber));
+            Console.WriteLine("The difference of " + _firstNumber + " and " + _secondNumber + " is: " + myClass.Subtract(_firstNumber, _secondNumber));
 
 
             Console.ReadLine();

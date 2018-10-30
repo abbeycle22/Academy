@@ -23,45 +23,22 @@ namespace Step_111
 
         //}
 
-        public int FirstNumber
+        public int Multiply(int x , int y)
         {
-            set
-            {
-                _firstNumber = value;
-            }
-            get
-            {
-                return _firstNumber;
-            }
-        }
-
-        public int SecondNumber
-        {
-            set
-            {
-                _secondNumber = value;
-            }
-            get
-            {
-                return _secondNumber;
-            }
-        }
-
-
-        public int Multiply()
-        {
-            int Multiply = _firstNumber * _secondNumber;
+            int Multiply = x * y;
             return Multiply;
         }
 
-        //public int Add()
-        //{
-        //    _return firstNumber + _secondNumber;
-        //}
+        public int Add(int x , int y)
+        {
+            int Add = x + y;
+            return Add;
+        }
 
-        //public int Subtract()
-        //{
-        //    return _firstNumber - _secondNumber;
-        //}
+        public int Subtract(int x, int y)
+        {
+            int Subtract = x - y;
+            return Subtract;
+        }
     }
 }
