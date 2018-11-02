@@ -14,21 +14,20 @@ namespace Step113
         public static void Main(string[] args)
         {
 
+            //Numbers newOne = new Numbers();
+            //int numOne = newOne.numOne;
+            //int numTwo = newOne.numTwo;
+
+            //newOne.Answer(numOne , numTwo);
+
             Numbers newOne = new Numbers();
             int numOne = newOne.numOne;
             int numTwo = newOne.numTwo;
 
-            Console.WriteLine(Numbers.Answer(numOne , numTwo));
+            newOne.Answer(numOne, numTwo);
 
         }
 
-        //public static void Main()
-        //{
-        //    Numbers newOne = new Numbers();
-        //    int numOne = newOne.numOne;
-        //    int numTwo = newOne.numTwo;
-
-        //    Console.WriteLine("This Method does this: " + Numbers.Answer());
-        //}
+        
     }
 }
