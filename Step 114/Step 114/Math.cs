@@ -8,27 +8,31 @@ namespace Step_114
 {
     public class Math
     {
-        internal int numThree;
 
-        public void Answer(int numOne)
+      
+
+        public int Change(int numOne)
         {
-
-            Console.WriteLine("The answer to the problem is: " + (3 + numOne));
+            int x = numOne;
+            x = 3 + numOne;
+            return x; 
 
         }
 
-        public void Money(decimal numTwo)
+        public decimal Change(decimal numTwo)
         {
-            Console.WriteLine("The answer to the problem is: " + (3 * numTwo));
-            
+            decimal x = numTwo;
+            x = 3 * x;
+            return x; 
+      
 
         }
 
-        public void Change(int x)
+        public int Change(string numThree)
         {
-            Console.WriteLine("Choose a number: ");
-            int numThree = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The answer this time is: " + (45 * numThree));
+           int x = Convert.ToInt32(numThree);
+            x = x * 45;
+            return x; 
 
         }
     }

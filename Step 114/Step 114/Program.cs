@@ -12,12 +12,14 @@ namespace Step_114
         {
             Math doIt = new Math();
             int numOne = 12;
-            decimal numTwo = .5m;
-            int numThree = doIt.numThree;
+            Console.WriteLine(doIt.Change(numOne));
 
-            doIt.Answer(numOne);
-            doIt.Money(numTwo);
-            doIt.Change(numThree);
+            Math Decimal = new Math();
+            decimal numTwo = .5m;
+            Console.WriteLine(Decimal.Change(numTwo));
+
+            Math Total = new Math();
+            Console.WriteLine(Total.Change("5"));
 
             Console.ReadLine();
         }
