@@ -8,12 +8,18 @@ namespace Step_115
 {
     class More
     {
-        public void Change(int x , [int y])
+        public int Change(int value , int valueOne = 0)
         {
-            int numOne = x;
-            int numTwo = y;
+            //public Nullable<int> opt;
+            //public int? valueOne = null; 
 
-            Console.WriteLine("The change you will recieve is: " + (25 - numOne [- numTwo]));
+            int x = value;
+            int y = valueOne;
+            x = 23 + value + y;
+            return x;
+            
         }
+
+      
     }  
 }
