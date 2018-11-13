@@ -23,7 +23,7 @@ namespace Step113
             numTwo = 5;
 
             Console.WriteLine("The first number you chose multiplied by 2 is : " + 2 * numOne);
-        Console.WriteLine("The second number you chose is: " + numTwo);
+            Console.WriteLine("The second number you chose is: " + numTwo);
 
         Console.ReadLine();
         }

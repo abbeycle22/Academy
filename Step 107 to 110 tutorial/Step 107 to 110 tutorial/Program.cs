@@ -10,6 +10,7 @@ namespace Step_107_to_110_tutorial
     {
         static void Main(string[] args)
         {
+
             Deck deck = new Deck();
             deck.Shuffle();
 
@@ -22,13 +23,6 @@ namespace Step_107_to_110_tutorial
             Console.ReadLine();
         }
 
-        //public static Deck Shuffle(Deck deck, int times)
-        //{
-        //    for (int i = 0; i < times; i++)
-        //    {
-        //        deck = Shuffle(deck);
-        //    }
-        //    return deck; 
-        //}
+        
     }
 }
