@@ -13,10 +13,28 @@ namespace Step_154
         {
             Console.WriteLine("Please enter a number.");
             string userNumber = Console.ReadLine() ;
-            File.WriteAllText(@"C:\Users\abbey\OneDrive\Documents\GitHub\Academy\Step 154", userNumber);
+            File.WriteAllText(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt", userNumber);
+
+            //using (StreamReader sr = File.OpenText(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt"))
+            //{
+            //    //string s = "";
+            //    while ((userNumber.ReadLine()) != null)
+            //    {
+            //        Console.WriteLine(userNumber);
+            //    }
+            //}
+            Console.WriteLine();
+
+            StreamReader sr = new StreamReader(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt");
+            userNumber = sr.ReadLine();
+            while (userNumber != null)
+            {
+                Console.WriteLine("The number you entered is: " + userNumber);
+                userNumber = sr.ReadLine();
+            }
+            sr.Close();
             Console.ReadLine();
-
-
         }
+
     }
 }
