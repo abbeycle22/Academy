@@ -15,14 +15,6 @@ namespace Step_154
             string userNumber = Console.ReadLine() ;
             File.WriteAllText(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt", userNumber);
 
-            //using (StreamReader sr = File.OpenText(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt"))
-            //{
-            //    //string s = "";
-            //    while ((userNumber.ReadLine()) != null)
-            //    {
-            //        Console.WriteLine(userNumber);
-            //    }
-            //}
             Console.WriteLine();
 
             StreamReader sr = new StreamReader(@"C:\Users\abbey\Desktop\TECH ACADEMY\c#\step154.txt");
