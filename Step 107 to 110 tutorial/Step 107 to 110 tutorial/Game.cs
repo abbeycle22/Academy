@@ -10,7 +10,7 @@ namespace Step_107_to_110_tutorial
     {
         public List<string> Players { get; set; }
         public string Name { get; set; }
-        public string Dealer { get; set; }
+        public Dictionary<Player, int> Bets { get; set; }
 
         public abstract void Play();
 
@@ -21,5 +21,6 @@ namespace Step_107_to_110_tutorial
                 Console.WriteLine(player);
             }
         }
+
     }
 }
