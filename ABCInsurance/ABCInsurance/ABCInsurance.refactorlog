@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="eb2d4fa5-cd09-4a4e-8c79-68aa0a683907" ChangeDateTime="11/28/2018 21:49:40">
+    <Property Name="ElementName" Value="[dbo].[QuoteInformation].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[QuoteInformation]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DriverId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5e8dc09-b197-4692-936b-d8691c3efc28" ChangeDateTime="11/28/2018 21:52:37">
+    <Property Name="ElementName" Value="[dbo].[Table1].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CarID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dc6a2083-e2db-4a4a-8fc0-e4c03b19de1e" ChangeDateTime="11/28/2018 21:53:25">
+    <Property Name="ElementName" Value="[dbo].[Insurance].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Insurance]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DUII" />
+  </Operation>
+</Operations>

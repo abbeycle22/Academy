@@ -26,5 +26,44 @@ namespace TechAcadStudentsMVC.Controllers
 
             return View();
         }
+
+        public ActionResult Instructor(int id)
+        {
+            ViewBag.Id = id;
+
+            Models.Instructor daytimeInstructor = new Models.Instructor
+            {
+                Id = 1,
+                FirstName = "Erik",
+                LastName = "Gross"
+            };
+            return View(daytimeInstructor);
+        }
+
+        public ActionResult Instructors()
+        {
+            List<Models.Instructor> instructors = new List<Models.Instructor>
+            {
+                new Models.Instructor
+                {
+                    Id = 1,
+                    FirstName = "Rick",
+                    LastName = "Ramen",
+                },
+                new Models.Instructor
+                {
+                    Id = 2,
+                    FirstName = "Brett",
+                    LastName = "Calendar"
+                },
+                new Models.Instructor
+                {
+                    Id = 3,
+                    FirstName = "Adam",
+                    LastName = "Smithsonian"
+                }
+            };
+            return View(instructors);
+        }
     }
 }

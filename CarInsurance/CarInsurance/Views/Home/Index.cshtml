@@ -1,0 +1,57 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Enter information for Auto Insurance Quote</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <label>First Name</label>
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Last Name</label>
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Email Address</label>
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Birthday</label>
+                    <input name="Birthday" type="date" class="form-control" placeholder="Birthday" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>What year of car?</label>
+                    <input name="CarYear" type="text" class="form-control" placeholder="Year of Car" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>What make of car?</label>
+                    <input name="CarMake" type="text" class="form-control" placeholder="Make of Car" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>What model of car?</label>
+                    <input name="CarModel" type="text" class="form-control" placeholder="Model of Car" />
+                </div>
+                <div class="custom-radio">
+                    <label>Have you ever had a DUII?</label><br />
+                    <input name="DUII" type="radio" value="Yes" />Yes<br />
+                    <input checked="checked" name="DUII" type="radio" value="No" />No<br />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>How many speeding tickets have you had?</label>
+                    <input name="SpeedingTicket" type="text" class="form-control" placeholder="Speeding Tickets" />
+                </div>
+                <div class="custom-radio">
+                    <label>Would you like Liability or Full Coverage insurance?</label><br />
+                    <input checked="checked" name="InsuranceType" type="radio" value="Liability" />Liability<br />
+                    <input name="InsuranceType" type="radio" value="Full Coverage" />Full Coverage<br />
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
