@@ -13,8 +13,8 @@ namespace AndAnotherInsurance.Controllers
     {
 
         private readonly string connectionString = @"Data Source=DESKTOP-OS50PJS\SQLEXPRESS;Initial Catalog=Quote;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        private readonly QuoteResult baseRate;
-        private string queryString;
+        private readonly string queryString;
+        private object finalQuote;
 
         public ActionResult Index()
         {
@@ -36,9 +36,9 @@ namespace AndAnotherInsurance.Controllers
             {
 
                 string queryString = @"INSERT INTO Quote (firstName, lastName, emailAddress, birthday, carYear, 
-                                        carMake, carModel, DUII, speedingTickets, insuranceType, finalQuote) VALUES (@firstName, 
+                                        carMake, carModel, DUII, speedingTickets, insuranceType) VALUES (@firstName, 
                                         @lastName, @emailAddress, @birthday, @carYear, @carMake, @carModel, @DUII,
-                                        @speedingTickets, @insuranceType, @finalQuote)";
+                                        @speedingTickets, @insuranceType)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -54,7 +54,7 @@ namespace AndAnotherInsurance.Controllers
                     command.Parameters.Add("@DUII", SqlDbType.VarChar);
                     command.Parameters.Add("@SpeedingTickets", SqlDbType.VarChar);
                     command.Parameters.Add("@InsuranceType", SqlDbType.VarChar);
-                    command.Parameters.Add("FinalQuote", SqlDbType.VarChar);
+                    //command.Parameters.Add("@FinalQuote", SqlDbType.VarChar);
 
                     command.Parameters["@FirstName"].Value = firstName;
                     command.Parameters["@LastName"].Value = lastName;
@@ -66,7 +66,7 @@ namespace AndAnotherInsurance.Controllers
                     command.Parameters["@DUII"].Value = DUII;
                     command.Parameters["@SpeedingTickets"].Value = speedingTickets;
                     command.Parameters["@InsuranceType"].Value = insuranceType;
-                    command.Parameters["@FinalQuote"].Value = finalQuote;
+                    //command.Parameters["@FinalQuote"].Value = finalQuote;
 
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -74,6 +74,27 @@ namespace AndAnotherInsurance.Controllers
                 }
                     return View("Success");
             }
+        }
+
+        
+        public ActionResult QuoteResult(string FinalQuote)
+        {
+            string queryString = @"INSERT INTO Quote (finalQuote) VALUES (@finalQuote)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+
+                command.Parameters.AddWithValue("@FinalQuote", SqlDbType.VarChar);
+
+                command.Parameters["@FinalQuote"].Value = finalQuote;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            return View("Success");
         }
 
         public ActionResult Admin()

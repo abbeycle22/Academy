@@ -7,6 +7,9 @@ namespace AndAnotherInsurance.Models
 {
     public class QuoteResult
     {
+        //private readonly string connectionString = @"Data Source=DESKTOP-OS50PJS\SQLEXPRESS;Initial Catalog=Quote;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //private readonly string queryString;
+        //private readonly string queryString = @"INSERT INTO Quote (finalQuote) VALUES (@finalQuote)";
 
         public int ID { get; set; }
         public string FirstName { get; set; }
@@ -36,12 +39,13 @@ namespace AndAnotherInsurance.Models
 
         public static int Quote()
         {
-                int baseRate = 50;
+
+            int baseRate = 50;
             QuoteResult quote = new QuoteResult();
 
             //age section
             if (age < 25) baseRate += 25;
-            else if (age < 18) baseRate += 100;            
+            else if (age < 18) baseRate += 100;
             else if (age > 100) baseRate += 25;
             //caryear section
             if (2000 > Convert.ToInt32(quote.CarYear)) baseRate += 25;
@@ -55,10 +59,15 @@ namespace AndAnotherInsurance.Models
             if (quote.SpeedingTickets > 0) baseRate += (quote.SpeedingTickets * 10);
             //Full Coverage Section
             if (quote.FullCoverage == "Yes") baseRate *= Convert.ToInt32(1.5);
+            //Final Quote area
+            string FinalQuote = Convert.ToString(baseRate);
+
 
             return (baseRate);
 
-            
+
         }
+
+
     }
 }
