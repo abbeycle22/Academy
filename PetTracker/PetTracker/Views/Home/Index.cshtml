@@ -1,0 +1,40 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h3 class="m0">Keep Track of your pet with Pet Tracker</h3>
+        </div>
+        
+        <body>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Pet Tracker", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Owners", "Index", "Owners/Index")</li>
+                            <li>@Html.ActionLink("Pets", "Index", "Pets/Index")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container body-content">
+               
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Pet Tracker Application</p>
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+
+        </body>
+
+</div>
